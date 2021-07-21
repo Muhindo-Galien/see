@@ -3,17 +3,24 @@
   --primary-dark: rgba(255,255,255,0);
   --primary-peach:#FF3D68;
   --primary-white:#ffff;
+  --primary-blue:#185ADB;
+
 }
 body{
   
   font-family: 'Roboto Condensed', sans-serif;
 }
 /* =========NAVBAR========= */
-
+/* nav{
+  z-index: 1;
+  position: fixed;
+} */
 .brand{
   padding: 0 !important;
   width: 10.25rem;
 }
+
+
 /* =========MENU LINKS======= */
 ul {
   margin-left: auto;
@@ -38,8 +45,76 @@ nav ul li{
   height: 6rem !important;
   padding: 0 !important;
 }
+
+@media (max-width:768px) {
+  .navbar-brand{
+    width: 7rem;
+  }
+}
 .navbar-nav > li > a.active , .navbar-nav > li > a.active:focus{
   border-top: 0.1875rem solid var(--primary-peach);
 }.navbar-nav > li > a:hover{
   border-top: 0.1875rem solid var(--primary-peach);
+}
+
+/* =========HEARDER========= */
+
+.header-wraper{
+  position: relative;
+  background: url("https://thumbs.dreamstime.com/z/programmer-occupation-writing-programming-code-laptop-computer-49131439.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: cover ;
+  height: 90vh;
+}
+.main-info{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main-info h1{
+  font-size: 4rem;
+  color: var(--primary-peach);
+  text-transform: uppercase;
+}
+/* =========TYPED TEXT========= */
+
+.typed-text{
+  font-size: 2rem;
+  color: var(--primary-white);
+}
+
+/* =========HEADER MAIN OFFER BUTTON========= */
+
+.btn-main-offer{
+  border: 1px solid var(--primary-blue);
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: 0.5rem 0.75rem;
+  margin: 2rem;
+  color: var(--primary-white);
+}
+.btn-main-offer:hover{
+  color: var(--primary-white);
+  background-color: #185ADB;
+  transition: .2s  ease-in-out;
+  z-index: 1;
+}
+
+@media (max-width:768px) {
+  .main-info h1{
+    font-size: 2.2rem !important;
+  }
+  .typed-text{
+    font-size: 1.3rem;
+  }
 }
